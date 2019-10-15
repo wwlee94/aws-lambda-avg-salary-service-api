@@ -1,4 +1,4 @@
-# AWS Lambda API를 이용한 회사별 평균 연봉 조회 
+# AWS Lambda API를 이용한 회사별 평균 연봉 조회
 
 ## 공공데이터(data.go.kr) 사이트 "사업장 정보 조회 서비스" 를 사용
 ### 1. 사업장 정보 조회 서비스
@@ -17,3 +17,12 @@
 - name -> 회사의 이름(한글)
 - bsNo -> 사업자등록번호
 - ex) {"name":"당근","bsNo":"375870"}
+
+### Response body
+- company -> 조회된 회사 이름
+- date -> 식별 번호 등록일
+- seq -> 식별 번호
+- employee_count -> 사원 수
+- paid_pension -> 회사 국민 연금 지출액
+- pension_per_employee -> 1인 국민 연금 지출액
+- salary -> 1인 평균 연봉
