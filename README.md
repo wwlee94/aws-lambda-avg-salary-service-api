@@ -14,15 +14,39 @@
 ### 요청 URL
 - https://sh49eptmi2.execute-api.ap-northeast-2.amazonaws.com/v2/programmers/api/avgSalaryService
 ### 요청 POST body
-- name -> 회사의 이름(한글)
-- bsNo -> 사업자등록번호
-- ex) {"name":"당근","bsNo":"375870"}
+- name -> 회사의 이름 (한글)
+- bsNo -> 사업자등록번호 (앞 6자리)
+
+#### 요청 POST body 예시 (JSON)
+  ``` 
+  {
+    "name": "당근",
+    "bsNo": "375870"
+  }
+  ```
 
 ### Response body
-- company -> 조회된 회사 이름
-- date -> 식별 번호 등록일
-- seq -> 식별 번호
-- employee_count -> 사원 수
-- paid_pension -> 회사 국민 연금 지출액
-- pension_per_employee -> 1인 국민 연금 지출액
-- salary -> 1인 평균 연봉
+```
+company -> 조회된 회사 이름
+date -> 식별 번호 등록일
+seq -> 식별 번호
+employee_count -> 사원 수
+paid_pension -> 회사 국민 연금 지출액
+pension_per_employee -> 1인 국민 연금 지출액
+salary -> 1인 평균 연봉
+```
+#### Response body 예시
+```
+{
+    "statusCode": 200,
+    "body": {
+        "company": "주식회사 당근마켓",
+        "date": "201911",
+        "seq": "22633455",
+        "employee_count": 38,
+        "paid_pension": 13056440,
+        "pension_per_employee": 171795,
+        "salary": "4,700만원"
+    }
+}
+```
